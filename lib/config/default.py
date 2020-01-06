@@ -13,8 +13,21 @@ import os
 
 from yacs.config import CfgNode as CN
 
-
 _C = CN()
+
+
+
+# Added by vj for domain_adaptation
+_C.SAVED_MODELS = CN()
+_C.SAVED_MODELS.CLASSIFIER = ' '
+_C.SAVED_MODELS.DISCRIMINATOR = ' '
+_C.SAVE_C_PATH = ' '
+_C.SAVE_D_PATH = ' '
+_C.DOMAIN2_FOLDER = ' '
+_C.RUNS = 250
+_C.LOG_INTERVAL = 50
+_C.CLASSIFIER_LR = 0.0001
+_C.DISCRIMINATOR_LR = 0.0001
 
 _C.OUTPUT_DIR = ''
 _C.LOG_DIR = ''

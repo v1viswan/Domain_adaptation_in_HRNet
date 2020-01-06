@@ -30,6 +30,8 @@ from core.function import testval, test
 from utils.modelsummary import get_model_summary
 from utils.utils import create_logger, FullModel
 
+import pickle
+
 def parse_args():
     parser = argparse.ArgumentParser(description='Train segmentation network')
     
@@ -43,6 +45,10 @@ def parse_args():
                         nargs=argparse.REMAINDER)
 
     args = parser.parse_args()
+    with open('test_args.pkl', 'wb') as f:
+        pickle.dump(args, f)
+    print("Args saved")
+    sds
     update_config(config, args)
 
     return args

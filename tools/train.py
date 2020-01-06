@@ -33,6 +33,9 @@ from core.function import train, validate
 from utils.modelsummary import get_model_summary
 from utils.utils import create_logger, FullModel
 
+#VJ
+import pickle
+
 def parse_args():
     parser = argparse.ArgumentParser(description='Train segmentation network')
     
@@ -46,6 +49,9 @@ def parse_args():
                         nargs=argparse.REMAINDER)
 
     args = parser.parse_args()
+    with open('train_args.pkl', 'wb') as f:
+        pickle.dump(args, f)
+    print("Args saved")
     update_config(config, args)
 
     return args
@@ -161,7 +167,8 @@ def main():
     else:
         criterion = CrossEntropy(ignore_label=config.TRAIN.IGNORE_LABEL,
                                  weight=train_dataset.class_weights)
-
+    
+        
     model = FullModel(model, criterion)
     model = nn.DataParallel(model, device_ids=gpus).cuda()
 
