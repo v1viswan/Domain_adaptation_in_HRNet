@@ -15,5 +15,5 @@ To visualize the results, please refer ./tools/visualize_adapted_network.ipynb. 
 
 
 ## Reference
-[1] Deep High-Resolution Representation Learning for Human Pose Estimation. Ke Sun, Bin Xiao, Dong Liu, and Jingdong Wang. CVPR 2019. [download](https://arxiv.org/pdf/1902.09212.pdf)
+[1] Deep High-Resolution Representation Learning for Human Pose Estimation. Ke Sun, Bin Xiao, Dong Liu, and Jingdong Wang. CVPR 2019. [download](https://arxiv.org/pdf/1902.09212.pdf) <br>
 [2] Adversarial Discriminative Domain Adaptation. Tzeng, Eric and Hoffman, Judy and Saenko, Kate and Darrell, Trevor. CVPR 2017.
